@@ -1,0 +1,31 @@
+{
+  "background": {
+    "scripts": [ "background.js" ],
+    "persistent": false
+  },
+  "content_scripts": [
+   {
+     "matches": ["<all_urls>"],
+     "css": ["tabber.css"],
+     "js": ["contentscript.js"]
+   }
+ ],
+  "commands": {
+    "switch_tabs": {
+      "description": "Switch between your tabs",
+      "suggested_key": {
+        "default": "Alt+Q",
+        "mac": "Alt+Q"
+      }
+    }
+  },
+  "description": "Switch between tabs like switching between windows.",
+  "manifest_version": 2,
+  "name": "Tabber: Switch Between Tabs",
+  "permissions": ["tabs","activeTab"],
+  "short_name": "Tabber",
+  "version": "0.1",
+  "web_accessible_resources": [
+    "img/*"
+  ]
+}
